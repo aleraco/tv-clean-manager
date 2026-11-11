@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+{
+  "schema": 3,
+  "app": "TV Clean Manager",
+  "app_version": "0.7.0",
+  "privacy": "Curated public contribution. No network identifiers, full firmware fingerprint, installed-app inventory, raw logs or backup locations. Self-reported evidence only.",
+  "device": {
+    "manufacturer": "Sony",
+    "brand": "Sony",
+    "model": "BRAVIA 4K GB",
+    "commercial_model": "kd-55xe9005",
+    "commercial_model_source": "user_declared",
+    "product": "BRAVIA_ATV2_EU",
+    "android_sdk": "28",
+    "firmware_revision": "672201"
+  },
+  "packages": [],
+  "operations": [],
+  "experiences": [
+    {
+      "id": "9aa21b5e-a03b-41e7-8c07-2b4634a3dcf0",
+      "nickname": "aleraco",
+      "provenance": "manual_declared",
+      "device": {
+        "product": "BRAVIA_ATV2_EU",
+        "android_sdk": "28",
+        "firmware_revision": "672201",
+        "commercial_model": "kd-55xe9005"
+      },
+      "actions": [
+        {
+          "type": "disable_package",
+          "package": "com.sony.dtv.promos",
+          "note": "Promozioni Sony"
+        },
+        {
+          "type": "disable_package",
+          "package": "tv.samba.ssm",
+          "note": "Samba TV"
+        },
+        {
+          "type": "disable_package",
+          "package": "com.sony.dtv.sonyselect",
+          "note": "Sony Select"
+        }
+      ],
+      "verification": {
+        "reboot": "user_attested",
+        "restore_on_hardware": "not_recorded"
+      },
+      "evidence": "Retrospectively declared by contributor; not performed by TV Clean Manager; reboot/TV/Home checks reported; restoration not tested."
+    },
+    {
+      "id": "e8155fe1-9fe7-4140-9f14-646cd13e3b6a",
+      "nickname": "aleraco",
+      "provenance": "external_tool_declared",
+      "device": {
+        "product": "BRAVIA_ATV2_EU",
+        "android_sdk": "28",
+        "firmware_revision": "672201",
+        "commercial_model": "kd-55xe9005"
+      },
+      "actions": [
+        {
+          "type": "install_launcher",
+          "package": "com.gathin.tvhome",
+          "note": "Installazione CleanYourTV"
+        },
+        {
+          "type": "set_home_launcher",
+          "package": "com.gathin.tvhome",
+          "note": "Impostato come Home"
+        },
+        {
+          "type": "disable_stock_launcher",
+          "package": "com.google.android.tvlauncher",
+          "note": "Launcher Google precedente"
+        }
+      ],
+      "verification": {
+        "reboot": "user_attested",
+        "restore_on_hardware": "not_recorded"
+      },
+      "evidence": "Retrospectively declared by contributor; not performed by TV Clean Manager; reboot/TV/Home checks reported; restoration not tested."
+    }
+  ],
+  "verification": {
+    "reboot": "user_attested",
+    "restore_on_hardware": "not_recorded",
+    "note": "Reboot and function checks are user reported. No actual rollback tested."
+  }
+}
+
+
+
+
+
