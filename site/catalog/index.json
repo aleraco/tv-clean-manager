@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "source": "curated community reports",
+  "entries": [],
+  "summaries": [],
+  "warning": "Self-reports, not independent technical verification. Never use as a package allowlist."
+}
