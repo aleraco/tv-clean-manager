@@ -2,11 +2,11 @@
 
 **ADB-powered package management for Android TV & Google TV — with backups, guided actions, and a community-maintained experience catalog.**
 
-[![Release](https://img.shields.io/badge/release-v0.7.0%20Beta-orange)](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.0)
+[![Release](https://img.shields.io/badge/release-v0.7.2%20Beta-orange)](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.2)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-blue)](https://github.com/aleraco/tv-clean-manager/releases)
 [![Community](https://img.shields.io/badge/community-explore%20reports-green)](https://aleraco.github.io/tv-clean-manager/)
 
-**[Download the beta](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.0)** · **[Explore the Community](https://aleraco.github.io/tv-clean-manager/)** · **[Report an issue](https://github.com/aleraco/tv-clean-manager/issues)**
+**[Download the beta](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.2)** · **[Explore the Community](https://aleraco.github.io/tv-clean-manager/)** · **[Report an issue](https://github.com/aleraco/tv-clean-manager/issues)**
 
 > **Beta software — read before using.** Disabling a critical Android TV package can remove essential functions or prevent the device from booting. The application's backups are diagnostic snapshots and operation records, **not full firmware images or a guaranteed recovery method**. Community reports are user-submitted evidence, not proof that a change is safe on your device.
 
@@ -16,7 +16,7 @@ TV Clean Manager is a Windows desktop tool for inspecting and managing applicati
 
 The project combines a guided package-management interface with a public, searchable catalog of actions reported by users for specific **models, firmware versions, packages, and actions**.
 
-### Current features (v0.7.0 Beta)
+### Current features (v0.7.2 Beta)
 
 - Connect to a compatible TV using its **local IP address** and ADB port.
 - Identify manufacturer, Android product, SDK level and firmware information.
@@ -28,9 +28,11 @@ The project combines a guided package-management interface with a public, search
 
 **Scope:** the diagnostic features are intended for compatible Android TV / Google TV devices. Guided write operations are still restricted; broad device compatibility and real-world restoration have **not** been validated. The launcher-installation wizard is planned work, **not** a feature of this beta.
 
+The **v0.7.2 Beta** includes GUI and DPI scaling fixes verified by the project author on Windows. Additional device compatibility and hardware restoration remain unverified. [v0.7.2 test notes](docs/releases/v0.7.2.md).
+
 ## Download and quick start
 
-1. Visit **[GitHub Releases](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.0)** and download the **application ZIP** from **Assets** (not GitHub's automatically generated *Source code* archives).
+1. Visit **[GitHub Releases](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.2)** and download the **application ZIP** from **Assets** (not GitHub's automatically generated *Source code* archives).
 2. Extract the ZIP and run `TVCleanManager.exe` on **Windows 10/11 x64**.
 3. On the TV, enable the applicable developer and network ADB debugging settings. These vary by manufacturer and Android version.
 4. Enter the TV's **local network IP address** (and port, where applicable) in the application.
@@ -82,7 +84,7 @@ The Windows application is distributed through **[Releases](https://github.com/a
 
 ## Roadmap
 
-- **v0.7 (current beta):** desktop app + public Community infrastructure.
+- **v0.7.2 (current beta):** desktop app + public Community infrastructure, with tested Windows GUI/DPI layout improvements.
 - **v0.8 (planned):** guided launcher management, with checks and a documented recovery path.
 - **v0.9 (planned):** broader device testing, safety review, accessibility and localization improvements.
 - **v1.0 (goal):** public stable release after the required hardware and restoration tests.
