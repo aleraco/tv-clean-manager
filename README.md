@@ -2,11 +2,11 @@
 
 **ADB-powered package management for Android TV & Google TV — with backups, guided actions, and a community-maintained experience catalog.**
 
-[![Release](https://img.shields.io/badge/release-v0.7.2%20Beta-orange)](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.2)
+[![Release](https://img.shields.io/badge/release-v0.7.3%20Beta-orange)](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.3)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-blue)](https://github.com/aleraco/tv-clean-manager/releases)
 [![Community](https://img.shields.io/badge/community-explore%20reports-green)](https://aleraco.github.io/tv-clean-manager/)
 
-**[Download the beta](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.2)** · **[Explore the Community](https://aleraco.github.io/tv-clean-manager/)** · **[Report an issue](https://github.com/aleraco/tv-clean-manager/issues)**
+**[Download the beta](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.3)** · **[Explore the Community](https://aleraco.github.io/tv-clean-manager/)** · **[Report an issue](https://github.com/aleraco/tv-clean-manager/issues)**
 
 > **Beta software — read before using.** Disabling a critical Android TV package can remove essential functions or prevent the device from booting. The application's backups are diagnostic snapshots and operation records, **not full firmware images or a guaranteed recovery method**. Community reports are user-submitted evidence, not proof that a change is safe on your device.
 
@@ -16,23 +16,25 @@ TV Clean Manager is a Windows desktop tool for inspecting and managing applicati
 
 The project combines a guided package-management interface with a public, searchable catalog of actions reported by users for specific **models, firmware versions, packages, and actions**.
 
-### Current features (v0.7.2 Beta)
+### Current features (v0.7.3 Beta)
 
 - Connect to a compatible TV using its **local IP address** and ADB port.
 - Identify manufacturer, Android product, SDK level and firmware information.
 - Search and inspect installed, enabled and disabled packages, including protected packages.
 - Create diagnostic backups and preserve operation history.
-- Offer guided package actions **only where the application's current safety rules allow them**; preserve protected system packages.
+- **Guided Mode** restricts operations to the application's supported device and package profiles.
+- **Advanced Mode** (explicit opt-in) allows selected unknown-package disables, but does not guarantee safety: critical-package recognition is incomplete.
+- **Enable Selected** can re-enable disabled packages even when previously disabled through manual ADB or an external tool; **Restore Journal** is a separate operation based on the app's own records.
 - Record and export previous manual ADB actions, external-tool actions, and app-recorded operations as separate sources.
 - Import local community reports and open the public catalog.
 
-**Scope:** the diagnostic features are intended for compatible Android TV / Google TV devices. Guided write operations are still restricted; broad device compatibility and real-world restoration have **not** been validated. The launcher-installation wizard is planned work, **not** a feature of this beta.
+**Scope:** diagnostics are intended for compatible Android TV / Google TV devices. Guided Mode remains restricted. Advanced Mode adds risk and must not be treated as permission to modify core system, network, ADB, launcher, or TV-service components. Broad device compatibility and real-world restoration have **not** been validated. The launcher-installation wizard is planned work, **not** a feature of this beta.
 
-The **v0.7.2 Beta** includes GUI and DPI scaling fixes verified by the project author on Windows. Additional device compatibility and hardware restoration remain unverified. [v0.7.2 test notes](docs/releases/v0.7.2.md).
+The **v0.7.3 Beta** builds on the verified GUI/DPI improvements of v0.7.2, adding Advanced Mode, Enable Selected, and a separate Restore Journal. The author has tested the build on Windows; independent hardware restoration testing remains outstanding. [v0.7.3 release notes](docs/releases/v0.7.3.md).
 
 ## Download and quick start
 
-1. Visit **[GitHub Releases](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.2)** and download the **application ZIP** from **Assets** (not GitHub's automatically generated *Source code* archives).
+1. Visit **[GitHub Releases](https://github.com/aleraco/tv-clean-manager/releases/tag/v0.7.3)** and download the **application ZIP** from **Assets** (not GitHub's automatically generated *Source code* archives).
 2. Extract the ZIP and run `TVCleanManager.exe` on **Windows 10/11 x64**.
 3. On the TV, enable the applicable developer and network ADB debugging settings. These vary by manufacturer and Android version.
 4. Enter the TV's **local network IP address** (and port, where applicable) in the application.
@@ -84,7 +86,7 @@ The Windows application is distributed through **[Releases](https://github.com/a
 
 ## Roadmap
 
-- **v0.7.2 (current beta):** desktop app + public Community infrastructure, with tested Windows GUI/DPI layout improvements.
+- **v0.7.3 (current beta):** desktop app + public Community infrastructure, GUI/DPI improvements, explicit Advanced Mode and independent enable/journal restore actions.
 - **v0.8 (planned):** guided launcher management, with checks and a documented recovery path.
 - **v0.9 (planned):** broader device testing, safety review, accessibility and localization improvements.
 - **v1.0 (goal):** public stable release after the required hardware and restoration tests.
@@ -93,7 +95,7 @@ Roadmap items are plans, not current capabilities.
 
 ## Safety and responsibility
 
-- **Protected packages remain protected.** An unknown package is not automatically safe to disable.
+- **Known protected packages remain protected.** Classification is not exhaustive. An unknown or unprotected-looking package is not automatically safe to disable. Advanced Mode carries a real risk of device malfunction or loss of ADB access.
 - **Backups do not guarantee recovery.** If a modification prevents booting or breaks ADB, a saved report may be insufficient to restore the device.
 - **Do not equate popularity with safety.** Two matching reports form a review candidate only.
 - **Use at your own risk**, especially for modifications not validated on your exact model and firmware.
